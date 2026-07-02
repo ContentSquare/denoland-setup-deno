@@ -19385,8 +19385,8 @@ async function resolveRelease(range) {
 			kind: "stable"
 		};
 	} else {
-		const res = await fetchWithRetries("https://deno.com/versions.json");
-		if (res.status !== 200) throw new Error("Failed to fetch stable version info from deno.com/versions.json. Please try again later.");
+		const res = await fetchWithRetries("https://dl.deno.land/versions.json");
+		if (res.status !== 200) throw new Error("Failed to fetch stable version info from dl.deno.land/versions.json. Please try again later.");
 		const versionJson = await res.json();
 		if (typeof versionJson !== "object" || versionJson === null) throw new Error("Fetched stable version info is invalid.");
 		if (!("cli" in versionJson)) throw new Error("Fetched stable version info is invalid.");
