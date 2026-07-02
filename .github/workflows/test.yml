@@ -21,7 +21,7 @@ jobs:
           - "1.33.1"
           - "canary"
           - "~1.32"
-          - "b290fd01f3f5d32f9d010fc719ced0240759c049"
+          - "4e8b2f46ab638ae6fa20cf53a9a4cd3b5f4550bf"
           - "rc"
           - "lts"
 
