@@ -159,10 +159,10 @@ async function resolveRelease(range: string): Promise<Version | null> {
     }
     return { version, kind: "stable" };
   } else {
-    const res = await fetchWithRetries("https://deno.com/versions.json");
+    const res = await fetchWithRetries("https://dl.deno.land/versions.json");
     if (res.status !== 200) {
       throw new Error(
-        "Failed to fetch stable version info from deno.com/versions.json. Please try again later.",
+        "Failed to fetch stable version info from dl.deno.land/versions.json. Please try again later.",
       );
     }
     const versionJson = await res.json();
